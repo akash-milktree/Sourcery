@@ -59,24 +59,29 @@ const features = [
 
 const Features: React.FC = () => {
     return (
-        <section className="py-24 bg-slate-50/50">
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="max-w-xl mb-16">
-                    <h2 className="text-sm font-bold text-violet-600 uppercase tracking-[0.2em] mb-4">Core Features</h2>
-                    <h3 className="text-4xl font-bold text-slate-900 tracking-tight leading-tight">
-                        Everything you need to <br />
-                        <span className="text-slate-400 font-medium">scale your property business.</span>
-                    </h3>
+        <section className="py-24 bg-brand-paper overflow-hidden">
+            <div className="max-w-[1200px] mx-auto px-6">
+                <div className="max-w-2xl mb-16 reveal">
+                    <div className="inline-block bg-white border border-black/[0.05] rounded-full px-4 py-1.5 mb-6 shadow-sm">
+                        <span className="text-[10px] font-bold text-brand-cyan uppercase tracking-widest font-mono">Core Features</span>
+                    </div>
+                    <h2 className="text-[32px] md:text-[40px] font-[800] text-brand-deep tracking-tighter leading-tight">
+                        Everything you need to <br className="hidden md:block" />
+                        <span className="text-brand-deep/40 font-bold">scale your property business.</span>
+                    </h2>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {features.map((feature, i) => (
-                        <div key={i} className="p-8 bg-white border border-slate-100 rounded-[2rem] hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 group">
-                            <div className="w-12 h-12 bg-violet-50 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                                {feature.icon}
+                        <div
+                            key={i}
+                            className={`p-10 bg-white border border-black/[0.03] rounded-[2rem] hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group reveal reveal-delay-${i % 3 + 1}`}
+                        >
+                            <div className="w-12 h-12 bg-brand-cyan/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                                {React.cloneElement(feature.icon as any, { className: "w-6 h-6 text-brand-cyan" })}
                             </div>
-                            <h4 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h4>
-                            <p className="text-slate-500 font-medium leading-relaxed">
+                            <h3 className="text-xl font-[800] text-brand-deep mb-4 tracking-tight">{feature.title}</h3>
+                            <p className="text-brand-deep/60 font-medium leading-relaxed text-[15px]">
                                 {feature.description}
                             </p>
                         </div>

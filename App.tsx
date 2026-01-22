@@ -22,18 +22,19 @@ const App: React.FC = () => {
         <FinalCTA />
       </main>
 
-      <footer className="py-12 px-6 border-t border-slate-100 bg-white">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-violet-600 rounded-lg flex items-center justify-center text-white font-bold">S</div>
-            <span className="text-xl font-bold tracking-tight text-slate-900">Sourcery</span>
+      <footer className="py-20 px-6 border-t border-black/[0.03] bg-white">
+        <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+          <div className="flex items-center gap-2 cursor-pointer group">
+            <div className="w-5 h-5 bg-brand-deep rounded-sm transform rotate-45 flex items-center justify-center transition-transform group-hover:rotate-[135deg] duration-500">
+            </div>
+            <span className="text-lg font-[800] tracking-tight text-brand-deep">sourcery</span>
           </div>
-          <div className="flex gap-8 text-sm text-slate-500 font-medium">
-            <a href="#" className="hover:text-slate-900 transition-colors">Privacy</a>
-            <a href="#" className="hover:text-slate-900 transition-colors">Terms</a>
-            <a href="#" className="hover:text-slate-900 transition-colors">Contact</a>
+          <div className="flex gap-10 text-[13px] text-brand-deep/40 font-bold uppercase tracking-widest font-mono">
+            <a href="#" className="hover:text-brand-cyan transition-colors">Privacy</a>
+            <a href="#" className="hover:text-brand-cyan transition-colors">Terms</a>
+            <a href="#" className="hover:text-brand-cyan transition-colors">Contact</a>
           </div>
-          <p className="text-sm text-slate-400">© 2024 Sourcery. All rights reserved.</p>
+          <p className="text-[12px] text-brand-deep/20 font-bold font-mono">© 2026 SOURCERY. ALL RIGHTS RESERVED.</p>
         </div>
       </footer>
     </div>

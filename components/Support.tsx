@@ -34,20 +34,32 @@ const Support: React.FC = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section className="py-24 bg-slate-50/30">
-            <div className="max-w-7xl mx-auto px-6">
+        <section className="py-32 bg-brand-paper overflow-hidden">
+            <div className="max-w-[1200px] mx-auto px-6">
                 {/* Testimonials */}
-                <div className="mb-24">
-                    <h2 className="text-sm font-bold text-violet-600 uppercase tracking-[0.2em] mb-12 text-center">Wall of Love</h2>
+                <div className="mb-32">
+                    <div className="text-center mb-16 reveal">
+                        <div className="inline-block bg-white border border-black/[0.05] rounded-full px-4 py-1.5 mb-6 shadow-sm">
+                            <span className="text-[10px] font-bold text-brand-cyan uppercase tracking-widest font-mono">Wall of Love</span>
+                        </div>
+                        <h2 className="text-[32px] md:text-[40px] font-[800] text-brand-deep tracking-tighter leading-tight">
+                            Trusted by the <br className="hidden md:block" />
+                            <span className="text-brand-deep/40 font-bold">community you grow with.</span>
+                        </h2>
+                    </div>
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {testimonials.map((t, i) => (
-                            <div key={i} className="p-8 bg-white border border-slate-100 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500">
-                                <p className="text-lg font-medium text-slate-600 italic mb-8">"{t.quote}"</p>
+                            <div
+                                key={i}
+                                className={`p-10 bg-white border border-black/[0.03] rounded-[2rem] shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 reveal reveal-delay-${i + 1}`}
+                            >
+                                <p className="text-lg font-medium text-brand-deep/70 mb-10 leading-relaxed italic">"{t.quote}"</p>
                                 <div className="flex items-center gap-4">
-                                    <img src={t.image} alt={t.name} className="w-12 h-12 rounded-full ring-2 ring-violet-50" />
+                                    <img src={t.image} alt={t.name} className="w-12 h-12 rounded-full ring-4 ring-brand-cyan/10" />
                                     <div>
-                                        <h4 className="font-bold text-slate-900">{t.name}</h4>
-                                        <p className="text-sm text-slate-400 font-semibold">{t.role}</p>
+                                        <h4 className="font-[800] text-brand-deep tracking-tight">{t.name}</h4>
+                                        <p className="text-[11px] text-brand-cyan font-bold uppercase tracking-widest font-mono">{t.role}</p>
                                     </div>
                                 </div>
                             </div>
@@ -57,24 +69,31 @@ const Support: React.FC = () => {
 
                 {/* FAQ */}
                 <div className="max-w-3xl mx-auto">
-                    <h2 className="text-sm font-bold text-violet-600 uppercase tracking-[0.2em] mb-12 text-center">Common Questions</h2>
+                    <div className="text-center mb-16 reveal">
+                        <div className="inline-block bg-white border border-black/[0.05] rounded-full px-4 py-1.5 mb-6 shadow-sm">
+                            <span className="text-[10px] font-bold text-brand-cyan uppercase tracking-widest font-mono">Common Questions</span>
+                        </div>
+                    </div>
                     <div className="space-y-4">
                         {faqs.map((faq, i) => (
-                            <div key={i} className="border border-slate-100 bg-white rounded-3xl overflow-hidden shadow-sm">
+                            <div
+                                key={i}
+                                className={`border border-black/[0.03] bg-white rounded-[1.5rem] overflow-hidden shadow-sm transition-all duration-300 reveal reveal-delay-${i % 3 + 1}`}
+                            >
                                 <button
                                     onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                                    className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
+                                    className="w-full px-10 py-7 text-left flex justify-between items-center hover:bg-brand-paper/50 transition-colors"
                                 >
-                                    <span className="font-bold text-slate-800">{faq.q}</span>
+                                    <span className="font-bold text-brand-deep tracking-tight">{faq.q}</span>
                                     <svg
-                                        className={`w-5 h-5 text-slate-400 transition-transform ${openIndex === i ? 'rotate-180' : ''}`}
+                                        className={`w-5 h-5 text-brand-cyan transition-transform ${openIndex === i ? 'rotate-180' : ''}`}
                                         fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                     >
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7"></path>
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                                 {openIndex === i && (
-                                    <div className="px-8 pb-6 text-slate-500 font-medium leading-relaxed animate-in fade-in slide-in-from-top-2 duration-300">
+                                    <div className="px-10 pb-7 text-brand-deep/60 font-medium leading-relaxed text-[15px] animate-in fade-in slide-in-from-top-2 duration-300">
                                         {faq.a}
                                     </div>
                                 )}
