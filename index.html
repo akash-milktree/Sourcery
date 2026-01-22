@@ -44,26 +44,7 @@
 
 <body class="bg-white text-slate-900">
     <div id="root"></div>
-    <script>
-        // Intersection Observer for scroll-reveal animations
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                threshold: 0.1
-            };
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-revealed');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            const revealElements = document.querySelectorAll('.reveal');
-            revealElements.forEach(el => observer.observe(el));
-        });
-    </script>
     <script type="module" src="./index.tsx"></script>
 </body>
 
