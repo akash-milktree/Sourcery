@@ -1,6 +1,12 @@
-import React from 'https://esm.sh/react@19.0.0';
+import React from 'react';
 import Navbar from './components/Navbar.tsx';
 import Hero from './components/Hero.tsx';
+import TrustBar from './components/TrustBar.tsx';
+import ProblemSolution from './components/ProblemSolution.tsx';
+import Features from './components/Features.tsx';
+import Comparison from './components/Comparison.tsx';
+import Support from './components/Support.tsx';
+import FinalCTA from './components/FinalCTA.tsx';
 
 const App: React.FC = () => {
   return (
@@ -8,8 +14,14 @@ const App: React.FC = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
+        <TrustBar />
+        <ProblemSolution />
+        <Features />
+        <Comparison />
+        <Support />
+        <FinalCTA />
       </main>
-      
+
       <footer className="py-12 px-6 border-t border-slate-100 bg-white">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2">

@@ -1,54 +1,66 @@
-import React from 'https://esm.sh/react@19.0.0';
+import React from 'react';
 import UIMockup from './UIMockup.tsx';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-white pt-16 pb-24 md:pt-24 md:pb-32">
-      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] bg-violet-50 rounded-full blur-3xl opacity-60 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[400px] h-[400px] bg-slate-50 rounded-full blur-3xl opacity-60 pointer-events-none" />
+    <section className="relative bg-[#f7f7f5] pt-8 pb-32 overflow-visible">
+      <div className="max-w-7xl mx-auto px-6 relative">
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center text-left">
-          <div className="lg:col-span-6 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-50 text-violet-700 text-xs font-bold tracking-wide uppercase mb-8 border border-violet-100 shadow-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-violet-500 animate-pulse"></span>
-              Sourcing Reimagined
+        {/* Top Badge */}
+        <div className="flex flex-col items-center mb-8">
+          <div className="bg-white/80 backdrop-blur-sm border border-slate-200 rounded-full px-4 py-1.5 flex items-center gap-3 shadow-sm">
+            <div className="flex -space-x-1.5">
+              <img src="https://picsum.photos/seed/1/32/32" className="w-5 h-5 rounded-full border border-white" />
+              <img src="https://picsum.photos/seed/2/32/32" className="w-5 h-5 rounded-full border border-white" />
+              <img src="https://picsum.photos/seed/3/32/32" className="w-5 h-5 rounded-full border border-white" />
             </div>
+            <span className="text-[13px] font-semibold text-slate-700">Trusted by 1M+ users</span>
+          </div>
+        </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.1] mb-8 tracking-tight">
-              Master your property <span className="text-violet-600">deal flow</span> in one structured system.
-            </h1>
-
-            <p className="text-lg md:text-xl text-slate-500 leading-relaxed mb-10 max-w-xl font-normal">
-              Ditch fragmented WhatsApp groups and messy spreadsheets. Sourcery provides the professional pipeline property investors and sourcers need to scale with confidence.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
-              <button className="w-full sm:w-auto px-8 py-4 bg-violet-600 text-white font-bold rounded-2xl hover:bg-violet-700 transition-all hover:shadow-xl hover:shadow-violet-200 active:scale-[0.98] text-lg">
-                Join the Waitlist
-              </button>
-              <button className="w-full sm:w-auto px-8 py-4 bg-white text-slate-700 border border-slate-200 font-bold rounded-2xl hover:border-slate-300 hover:bg-slate-50 transition-all active:scale-[0.98] text-lg">
-                Book a Demo
-              </button>
-            </div>
-
-            <div className="flex items-center gap-3 text-slate-400">
-              <div className="flex -space-x-2">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-slate-100 overflow-hidden">
-                    <img src={`https://picsum.photos/seed/${i + 40}/64/64`} alt="User" />
-                  </div>
-                ))}
-              </div>
-              <span className="text-sm font-medium">
-                The professional standard for <strong className="text-slate-600">off-market</strong> property sourcing.
-              </span>
-            </div>
+        {/* Floating Icons Container */}
+        <div className="relative text-center max-w-4xl mx-auto">
+          {/* Floating Icons */}
+          <div className="absolute -left-20 top-0 w-16 h-16 bg-white rounded-2xl shadow-xl flex items-center justify-center transform -rotate-12 border border-slate-50">
+            <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">D</div>
+          </div>
+          <div className="absolute -left-12 bottom-12 w-16 h-16 bg-white rounded-2xl shadow-xl flex items-center justify-center transform rotate-6 border border-slate-50">
+            <div className="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center text-white font-bold text-xl">N</div>
+          </div>
+          <div className="absolute -right-20 top-4 w-16 h-16 bg-white rounded-2xl shadow-xl flex items-center justify-center transform rotate-12 border border-slate-50">
+            <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">R</div>
+          </div>
+          <div className="absolute -right-12 bottom-20 w-16 h-16 bg-white rounded-2xl shadow-xl flex items-center justify-center transform -rotate-6 border border-slate-50">
+            <div className="w-10 h-10 bg-blue-700 rounded-lg flex items-center justify-center text-white font-bold text-xl">S</div>
           </div>
 
-          <div className="lg:col-span-6 hidden lg:block">
-            <UIMockup />
+          <h1 className="text-[52px] md:text-[84px] font-bold text-slate-900 leading-[1.05] tracking-tight mb-8">
+            Turn Scattered Property <br /> Deals Into Smart Investments.
+          </h1>
+
+          <p className="text-lg md:text-xl text-slate-600 font-medium leading-relaxed mb-4 max-w-xl mx-auto">
+            Replace chaotic WhatsApp groups and risky spreadsheets with a secure, verified marketplace.
+          </p>
+          <p className="text-sm font-bold text-slate-400 italic mb-10 italic">
+            The end-to-end operating system for professional deal sourcing.
+          </p>
+
+          <button className="px-8 py-4 bg-[#00CADC] text-slate-900 font-bold rounded-full hover:shadow-xl hover:shadow-[#00CADC]/20 transition-all active:scale-95 text-lg mb-6">
+            Join the Waitlist
+          </button>
+
+          <div className="flex flex-col items-center gap-2">
+            <div className="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-wider">
+              <svg className="w-4 h-4 text-[#00CADC]" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" /><path fillRule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clipRule="evenodd" /></svg>
+              No credit card required - Launching Q1 2026
+            </div>
+            <span className="text-xs font-bold text-slate-500">Trusted by professional investors & sourcers</span>
           </div>
+        </div>
+
+        {/* Dashboard Mockup - Reusing existing structure but styling to match container */}
+        <div className="mt-20 relative max-w-6xl mx-auto bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-white">
+          <UIMockup />
         </div>
       </div>
     </section>
