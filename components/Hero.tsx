@@ -1,20 +1,15 @@
-
-import React from 'react';
-import UIMockup from './UIMockup';
+import React from 'https://esm.sh/react@19.0.0';
+import UIMockup from './UIMockup.tsx';
 
 const Hero: React.FC = () => {
   return (
     <section className="relative overflow-hidden bg-white pt-16 pb-24 md:pt-24 md:pb-32">
-      {/* Background Subtle Accent */}
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] bg-violet-50 rounded-full blur-3xl opacity-60 pointer-events-none" />
       <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[400px] h-[400px] bg-slate-50 rounded-full blur-3xl opacity-60 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center text-left">
-          
-          {/* Content Column */}
           <div className="lg:col-span-6 max-w-2xl">
-            {/* Tagline/Pre-headline */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-50 text-violet-700 text-xs font-bold tracking-wide uppercase mb-8 border border-violet-100 shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-violet-500 animate-pulse"></span>
               Sourcing Reimagined
@@ -37,7 +32,6 @@ const Hero: React.FC = () => {
               </button>
             </div>
 
-            {/* Trust Cue */}
             <div className="flex items-center gap-3 text-slate-400">
               <div className="flex -space-x-2">
                 {[1, 2, 3].map((i) => (
@@ -52,7 +46,6 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Visual Column */}
           <div className="lg:col-span-6 hidden lg:block">
             <UIMockup />
           </div>

@@ -1,7 +1,6 @@
-
-import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import React from 'https://esm.sh/react@19.0.0';
+import Navbar from './components/Navbar.tsx';
+import Hero from './components/Hero.tsx';
 
 const App: React.FC = () => {
   return (
@@ -11,7 +10,6 @@ const App: React.FC = () => {
         <Hero />
       </main>
       
-      {/* Footer Placeholder for visual balance */}
       <footer className="py-12 px-6 border-t border-slate-100 bg-white">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2">

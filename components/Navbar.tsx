@@ -1,11 +1,9 @@
-
-import React from 'react';
+import React from 'https://esm.sh/react@19.0.0';
 
 const Navbar: React.FC = () => {
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer">
           <div className="w-9 h-9 bg-violet-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-violet-200">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -15,7 +13,6 @@ const Navbar: React.FC = () => {
           <span className="text-2xl font-bold tracking-tight text-slate-900">Sourcery</span>
         </div>
 
-        {/* Desktop Links - Minimal & Centered feeling */}
         <div className="hidden md:flex items-center gap-10 font-medium text-slate-500 text-sm">
           <a href="#" className="hover:text-violet-600 transition-colors">Platform</a>
           <a href="#" className="hover:text-violet-600 transition-colors">Solutions</a>
@@ -23,7 +20,6 @@ const Navbar: React.FC = () => {
           <a href="#" className="hover:text-violet-600 transition-colors">Pricing</a>
         </div>
 
-        {/* Action Button */}
         <div className="flex items-center gap-4">
           <button className="hidden sm:block text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">
             Log in
