@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar.tsx';
 import Hero from './components/Hero.tsx';
 import TrustBar from './components/TrustBar.tsx';
-import ProblemSolution from './components/ProblemSolution.tsx';
+import NewStandard from './components/NewStandard.tsx';
 import Features from './components/Features.tsx';
 import Comparison from './components/Comparison.tsx';
 import Support from './components/Support.tsx';
@@ -14,8 +14,8 @@ const App: React.FC = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
+        <NewStandard />
         <TrustBar />
-        <ProblemSolution />
         <Features />
         <Comparison />
         <Support />
